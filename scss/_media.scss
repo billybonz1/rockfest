@@ -1,0 +1,24 @@
+@import "bourbon";
+@import "vars.scss";
+
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+	.allert, .allert_tell{
+		top: 0;
+	}
+	.field{
+		float: none;
+	}
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
