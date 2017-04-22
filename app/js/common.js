@@ -49,6 +49,13 @@ $(function() {
         newLives.goToNextSlide();
     });
 
+    $(".hamburger").on("click",function(e){
+        $(".menu").removeClass("hide");
+    });
+    $(".close").on("click",function(e){
+        $(".menu").addClass("hide");
+    });
+
 });
 
 //Форма отправки 2.0
