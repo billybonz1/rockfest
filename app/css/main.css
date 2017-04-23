@@ -578,6 +578,75 @@ footer {
     padding-left: 10px;
     padding-right: 10px; } }
 
+.popup {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 429px; }
+  .popup h2 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 72px;
+    padding-right: 21px; }
+  .popup .modal-dialog {
+    border: 1px solid #78a126;
+    background-color: #000000;
+    padding: 30px 22px; }
+  .popup label {
+    width: 100%;
+    margin-bottom: 25px; }
+    .popup label span {
+      min-width: 21%;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 24px;
+      display: inline-block; }
+    .popup label input {
+      width: 79%;
+      border: 0;
+      height: 42px;
+      background-color: #282727;
+      outline: 0;
+      color: #fff;
+      padding-left: 20px; }
+      .popup label input:focus {
+        background-color: #1b1a1a; }
+  .popup .btn-salat {
+    max-width: 216px;
+    height: 45px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px; }
+
+.popup-close {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  background: none;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border: 0;
+  outline: 0;
+  -webkit-transition: .5s all;
+  transition: .5s all;
+  cursor: pointer; }
+  .popup-close:hover, .popup-close:focus {
+    outline: 0;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+
+@media (max-width: 384px) {
+  .popup label span {
+    min-width: 21%; } }
+
 @media only screen and (max-width: 992px) {
   .allert, .allert_tell {
     top: 0; }

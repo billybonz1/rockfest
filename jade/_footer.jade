@@ -12,11 +12,24 @@ footer
                             img(src="img/partner3.png")
                         .partner
                             img(src="img/partner4.png")
-                    a.btn.btn-salat.btn-big(href="#") Есть вопросы? Пишите нам!
+                    a.btn.btn-salat.btn-big(href="#",type="button",data-toggle="modal",data-target="#call") Есть вопросы? Пишите нам!
                     .footer-btns.clearfix
                         a.btn.btn-grey.btn-small.pull-left(href="#") О проекте
                         a.btn.btn-grey.btn-small.pull-right(href="#") Сотрудничество и реклама
-.modal.fade(id="call",tabindex="-1",role="dialog",)
+.modal.fade.popup(id="call",tabindex="-1",role="dialog")
+    .modal-dialog(role="document")
+        button.popup-close(type="button",data-dismiss="modal")
+            i.fa.fa-times
+        h2 Есть вопросы? Пишите нам!
+        form
+            label
+                span Имя
+                input(type="text")
+            label
+                span E-mail
+                input(type="text")
+            input.btn.btn-salat(type="submit",value="Отправить")
+
 script.
     var scr = {"scripts":[
         {"src" : "js/libs.js", "async" : false},
