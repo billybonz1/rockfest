@@ -21,14 +21,15 @@ footer
         button.popup-close(type="button",data-dismiss="modal")
             i.fa.fa-times
         h2 Есть вопросы? Пишите нам!
-        form
-            label
-                span Имя
-                input(type="text")
-            label
-                span E-mail
-                input(type="text")
-            input.btn.btn-salat(type="submit",value="Отправить")
+        .modal-dialog_mod
+            form
+                label
+                    span Имя
+                    input(type="text")
+                label
+                    span E-mail
+                    input(type="text")
+                input.btn.btn-salat(type="submit",value="Отправить")
 
 script.
     var scr = {"scripts":[

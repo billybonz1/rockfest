@@ -7303,15 +7303,18 @@ div.hamburger {
     -webkit-transition: .5s all;
     transition: .5s all; }
     .menu li.close:hover {
-      -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-      transform: rotate(90deg); }
+      color: #a82f0d;
+      text-shadow: none; }
   .menu li {
     float: left;
     width: 33.333333%;
     height: 50%;
     border-left: 2px solid rgba(255, 255, 255, 0.12);
     border-top: 2px solid rgba(255, 255, 255, 0.12); }
+    .menu li:hover a span:after {
+      background-color: #a82f0d;
+      -webkit-transition: .5s all;
+      transition: .5s all; }
     .menu li:nth-child(3n+1) {
       border-left: 0; }
     .menu li:nth-child(1), .menu li:nth-child(2), .menu li:nth-child(3) {
@@ -7405,14 +7408,13 @@ div.hamburger {
 .new-live__img {
   background: #000;
   position: relative;
-  cursor: pointer;
-  -webkit-transition: 1s;
-  transition: 1s; }
+  cursor: pointer; }
   .new-live__img:hover {
     background: #1a1a1a; }
     .new-live__img:hover:after {
-      -webkit-transform: scale(1.2) rotateY(360deg);
-      transform: scale(1.2) rotateY(360deg); }
+      -webkit-border-radius: 30px;
+      border-radius: 30px;
+      padding-left: 5px; }
   .new-live__img:after {
     -webkit-transition: 1s;
     transition: 1s;
@@ -7448,18 +7450,18 @@ div.hamburger {
   top: 50%;
   width: 56px;
   height: 56px;
-  background-color: rgba(168, 47, 13, 0.48);
+  background-color: rgba(168, 47, 13, 0);
   -webkit-border-radius: 100%;
   border-radius: 100%;
   margin-top: -28px;
   cursor: pointer;
-  -webkit-transition: .5s all;
-  transition: .5s all; }
+  -webkit-transition: .4s all;
+  transition: .4s all; }
   .new-lives__arrow:after {
     width: 39px;
     height: 39px;
     margin: auto;
-    background-color: rgba(168, 47, 13, 0.48);
+    background-color: #632613;
     position: absolute;
     left: 0;
     top: 0;
@@ -7474,12 +7476,10 @@ div.hamburger {
     line-height: 38px;
     text-transform: uppercase;
     text-align: center;
-    -webkit-transition: .5s all;
-    transition: .5s all; }
+    -webkit-transition: .4s all;
+    transition: .4s all; }
   .new-lives__arrow:hover {
-    -webkit-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-    transform: scale(1.02); }
+    background-color: rgba(168, 47, 13, 0.6); }
     .new-lives__arrow:hover:after {
       background-color: rgba(168, 47, 13, 0.88); }
 
@@ -7516,7 +7516,7 @@ div.hamburger {
     margin-right: 13px; }
   .btn-orange:hover, .btn-orange:focus {
     color: #fff;
-    background-color: #792209;
+    background-color: #5d1a08;
     -webkit-box-shadow: none;
     box-shadow: none; }
 
@@ -7557,11 +7557,16 @@ div.hamburger {
     border: 0;
     font-size: 24px;
     outline: 0;
-    -webkit-transition: .5s all;
-    transition: .5s all;
+    -webkit-transition: .3s all;
+    transition: .3s all;
     cursor: pointer; }
+    .search-form button i {
+      -webkit-transition: .3s all;
+      transition: .3s all; }
     .search-form button:hover {
-      background-color: #90280b; }
+      background-color: #5d1a08; }
+      .search-form button:hover i {
+        color: white; }
 
 .hash-tag {
   color: #ffffff;
@@ -7586,17 +7591,19 @@ div.hamburger {
   background-color: #464646;
   display: inline-block;
   margin-right: 3px;
-  color: #000000;
   font-size: 24px;
   font-weight: 400;
   position: relative;
   text-align: center;
   line-height: 35px;
-  -webkit-transition: .5s all;
-  transition: .5s all; }
-  .social__item:hover, .social__item:focus {
-    color: #fff;
-    background-color: #202020; }
+  -webkit-transition: .3s all;
+  transition: .3s all; }
+  .social__item i {
+    color: #000000;
+    -webkit-transition: .3s all;
+    transition: .3s all; }
+  .social__item:hover i {
+    color: white; }
 
 .livestream {
   padding-top: 15px;
@@ -7625,3 +7632,12 @@ div.hamburger {
   .watch-live:hover, .watch-live:focus {
     color: #fff;
     text-shadow: 1px 1px 0 #000; }
+
+.social__item_vk:hover {
+  background-color: #0e547d; }
+
+.social__item_tw:hover {
+  background-color: #0ea8ef; }
+
+.social__item_fb:hover {
+  background-color: #0b5e9f; }
