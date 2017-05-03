@@ -7286,7 +7286,9 @@ div.hamburger {
   z-index: 10; }
 
 .menu {
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 100;
@@ -7309,19 +7311,31 @@ div.hamburger {
     border: 0;
     opacity: 1;
     -webkit-transition: .5s all;
-    transition: .5s all; }
+    transition: .5s all;
+    background-color: transparent; }
     .menu li.close:hover {
       color: #a82f0d;
       text-shadow: none; }
   .menu li {
     float: left;
     width: 33.333333%;
-    height: 50%;
+    height: 482px;
     border-left: 2px solid rgba(255, 255, 255, 0.12);
     border-top: 2px solid rgba(255, 255, 255, 0.12);
     position: relative;
     text-align: center;
-    background-color: #0a0a0a; }
+    background-color: #0a0a0a;
+    background-position: center; }
+    @media (max-width: 782px) {
+      .menu li {
+        height: 50%; } }
+    @media (max-width: 548px) {
+      .menu li {
+        width: 100%;
+        height: 33.3%;
+        float: none;
+        border: none;
+        border-bottom: 2px solid #272321; } }
     .menu li:hover a span:before {
       background-color: #a82f0d;
       -webkit-transition: .5s all;
@@ -7345,12 +7359,19 @@ div.hamburger {
       top: 0;
       right: 0;
       bottom: 0; }
+      @media (max-width: 782px) {
+        .menu li a {
+          font-size: 25px;
+          height: 88px; } }
       .menu li a span {
         width: 104px;
         height: 3px;
         background-color: #ffffff;
         display: inline-block;
         line-height: 0; }
+        @media (max-width: 782px) {
+          .menu li a span {
+            width: 60px; } }
         .menu li a span:after {
           display: inline-block;
           content: "";
@@ -7361,6 +7382,9 @@ div.hamburger {
           top: -10px;
           -webkit-transition: .3s all;
           transition: .3s all; }
+          @media (max-width: 782px) {
+            .menu li a span:after {
+              top: -6px; } }
       .menu li a:hover span:after {
         width: 100%; }
   @media (max-width: 782px) {
@@ -7371,23 +7395,34 @@ div.hamburger {
       top: 5px;
       right: 5px; } }
   @media (max-width: 548px) {
-    .menu li, .menu li:nth-child(3n+1) {
-      border-left: 2px solid rgba(255, 255, 255, 0.12);
-      border-top: 2px solid rgba(255, 255, 255, 0.12);
-      width: 50%;
-      height: 33.33333%; }
-    .menu li:nth-child(3) {
-      border-left: 0;
-      border-top: 2px solid rgba(255, 255, 255, 0.12); }
-    .menu li:nth-child(1) {
-      border-top: 0;
-      border-left: 0; }
-    .menu li:nth-child(5) {
-      border-left: 0; }
     .menu li.close {
       width: auto;
       height: auto;
       border: 0; } }
+
+.menu1 {
+  background-image: url("../img/menu1.png");
+  background-repeat: no-repeat; }
+
+.menu2 {
+  background-image: url("../img/menu2.png");
+  background-repeat: no-repeat; }
+
+.menu3 {
+  background-image: url("../img/menu3.png");
+  background-repeat: no-repeat; }
+
+.menu4 {
+  background-image: url("../img/menu4.png");
+  background-repeat: no-repeat; }
+
+.menu5 {
+  background-image: url("../img/menu5.png");
+  background-repeat: no-repeat; }
+
+.menu6 {
+  background-image: url("../img/menu6.png");
+  background-repeat: no-repeat; }
 
 .logo {
   width: 339px;
