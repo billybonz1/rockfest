@@ -208,7 +208,6 @@
     font-weight: 400;
     line-height: 21px;
     border-bottom: 2px solid #d4d4d4;
-    display: inline-block;
     margin-top: 6px;
     span{
       margin-right: 10px;
@@ -249,7 +248,11 @@
   &:nth-child(3){
     border-bottom: 0;
   }
+  .rock__item__new__date{
+    font-weight: 700;
+  }
   p{
+    font-weight: 700;
     margin-bottom: 7px;
   }
   margin-bottom: 10px;
@@ -314,6 +317,12 @@
   position: static;
 }
 
+.spec-pad{
+  @media(max-width: 767px){
+    padding-top: 50px;
+  }
+}
+
 .tabs2{
   position: absolute;
   top: 17px;
@@ -321,17 +330,33 @@
   margin-left: -260px;
   border-bottom: 0;
   z-index: 2;
+  @media(max-width: 767px){
+    flex-direction: column;
+    margin-left: -110px;
+    top: 25px;
+  }
   .nav-item{
     background: #240300;
     border-top: 2px solid #464646;
     border-bottom: 2px solid #464646;
+    @media(max-width: 767px){
+      border-radius: 100px;
+      border: 2px solid #464646;
+      margin-bottom: 10px;
+    }
     &:first-child{
       border-left: 2px solid #464646;
       border-radius: 100px 0 0 100px;
+      @media(max-width: 767px){
+        border-radius: 100px;
+      }
     }
     &:last-child{
       border-right: 2px solid #464646;
       border-radius:  0 100px 100px 0;
+      @media(max-width: 767px){
+        border-radius: 100px;
+      }
     }
     a{
       height: 38px;
@@ -343,6 +368,10 @@
       padding-left: 25px;
       padding-right: 25px;
       color: #ffffff;
+      @media(max-width: 767px){
+        padding-left: 50px;
+        padding-right: 50px;
+      }
       i{
         margin-right: 8px;
       }
@@ -363,15 +392,27 @@
   width: 0;
   position: absolute;
   pointer-events: none;
+  @media(max-width: 767px){
+    bottom: 154px;
+    left: 30px;
+  }
 }
 
 .tabs22:after, .tabs22:before{
   left: 277px;
+  @media(max-width: 767px){
+    bottom: 154px;
+    left: 128px;
+  }
 }
 
 
 .tabs23:after, .tabs23:before{
   left: 427px;
+  @media(max-width: 767px){
+    bottom: 154px;
+    left: 215px;
+  }
 }
 
 .tabs2:after {
@@ -390,22 +431,22 @@
 
 @media(max-width: 620px){
   .tabs2{
-    margin-left: -154px;
+    margin-left: -70px;
   }
   .tabs2 .nav-item a{
     font-size: 13px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
     line-height: 22px;
   }
   .tabs2:after, .tabs2:before{
-    left: 68px;
+    left: 30px;
   }
   .tabs22:after, .tabs22:before{
-    left: 168px;
+    left: 85px;
   }
   .tabs23:after, .tabs23:before{
-    left: 258px;
+    left: 140px;
   }
 }
 
@@ -668,8 +709,26 @@ footer{
 .partner{
   display: inline-block;
   vertical-align: middle;
-  margin: 0 3%;
+  margin: 0 1%;
   margin-bottom: 20px;
+  @media(max-width: 1867px){
+    margin: 0 2%;
+  }
+  @media(max-width: 1600px){
+    margin: 0 3%;
+  }
+  @media(max-width: 1490px){
+    margin: 0 4%;
+  }
+  @media(max-width: 1010px){
+    margin: 0 2%;
+  }
+  @media(max-width: 553px){
+    margin: 6% 7%;
+  }
+  @media(max-width: 365px){
+    margin: 6% 4%;
+  }
 }
 
 
@@ -736,7 +795,6 @@ footer{
   }
 }
 
-
 .popup{
   width: 100%;
   margin: 0 auto;
@@ -750,10 +808,15 @@ footer{
     text-transform: uppercase;
     background-color: #78a126;
     height: 71px;
+    @media(max-width: 400px){
+      font-size: 14px;
+    }
   }
   .modal-dialog{
     border: 1px solid #78a126;
     background-color: #000000;
+    top: 50%;
+    margin-top: -163px;
   }
   label{
     width: 100%;
@@ -765,6 +828,9 @@ footer{
       font-weight: 300;
       line-height: 24px;
       display: inline-block;
+      @media(max-width: 400px){
+        font-size: 16px;
+      }
     }
     input{
       width: 79%;
@@ -807,6 +873,10 @@ footer{
   outline: 0;
   transition: .5s all;
   cursor: pointer;
+  @media(max-width: 400px){
+    top: 16px;
+    right: 5px;
+  }
   &:hover,&:focus{
     outline: 0;
     transform: rotate(90deg);

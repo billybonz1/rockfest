@@ -45,7 +45,9 @@ div.hamburger{
 
 
 .menu{
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 100;
@@ -68,6 +70,7 @@ div.hamburger{
     border: 0;
     opacity: 1;
     transition: .5s all;
+    background-color: transparent;
     &:hover{
       color: #a82f0d;
       text-shadow: none;
@@ -76,12 +79,23 @@ div.hamburger{
   li {
     float: left;
     width: 33.333333%;
-    height: 50%;
+    height: 482px;
     border-left: 2px solid rgba(255, 255, 255, 0.12);
     border-top: 2px solid rgba(255, 255, 255, 0.12);
     position: relative;
     text-align: center;
     background-color: #0a0a0a;
+    background-position: center;
+    @media(max-width: 782px){
+      height: 50%;
+    }
+    @media(max-width: 548px){
+      width: 100%;
+      height: 33.3%;
+      float: none;
+      border: none;
+      border-bottom: 2px solid #272321;
+    }
     &:hover {
       a {
         span {
@@ -113,12 +127,19 @@ div.hamburger{
       top: 0;
       right: 0;
       bottom: 0;
+      @media(max-width: 782px){
+        font-size: 25px;
+        height: 88px;
+      }
       span {
         width: 104px;
         height: 3px;
         background-color: #ffffff;
         display: inline-block;
         line-height: 0;
+        @media(max-width: 782px){
+          width: 60px;
+        }
         &:after {
           display: inline-block;
           content: "";
@@ -128,6 +149,9 @@ div.hamburger{
           position: relative;
           top: -10px;
           transition: .3s all;
+          @media(max-width: 782px){
+            top: -6px;
+          }
         }
       }
       &:hover {
@@ -153,21 +177,16 @@ div.hamburger{
 
   @media(max-width: 548px){
     li,li:nth-child(3n+1){
-      border-left: 2px solid rgba(255,255,255,0.12);
-      border-top: 2px solid rgba(255,255,255,0.12);
-      width: 50%;
-      height: 33.33333%;
+
     }
     li:nth-child(3){
-      border-left: 0;
-      border-top: 2px solid rgba(255,255,255,0.12);
+
     }
     li:nth-child(1){
-      border-top: 0;
-      border-left: 0;
+
     }
     li:nth-child(5){
-      border-left: 0;
+
     }
     li.close{
       width: auto;
@@ -175,6 +194,36 @@ div.hamburger{
       border: 0;
     }
   }
+}
+
+.menu1{
+  background-image: url("../img/menu1.png");
+  background-repeat: no-repeat;
+}
+
+.menu2{
+  background-image: url("../img/menu2.png");
+  background-repeat: no-repeat;
+}
+
+.menu3{
+  background-image: url("../img/menu3.png");
+  background-repeat: no-repeat;
+}
+
+.menu4{
+  background-image: url("../img/menu4.png");
+  background-repeat: no-repeat;
+}
+
+.menu5{
+  background-image: url("../img/menu5.png");
+  background-repeat: no-repeat;
+}
+
+.menu6{
+  background-image: url("../img/menu6.png");
+  background-repeat: no-repeat;
 }
 
 
