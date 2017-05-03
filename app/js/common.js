@@ -56,6 +56,42 @@ $(function() {
         $(".menu").addClass("hide");
     });
 
+    $(".hamburger2").on("click",function(e){
+        $(".menu2").removeClass("hide2");
+    });
+    $(".close2").on("click",function(e){
+        $(".menu2").addClass("hide2");
+    });
+
+    $('.a-time-line').on('click',function(){
+        $(this).toggleClass('active');
+        $(".time-line").toggleClass('active');
+    });
+    $(document).on("click",function(event){
+        if( $(event.target).closest(".time-line,.a-time-line").length )return;
+        $('.a-time-line').removeClass('active');
+        $(".time-line").removeClass('active');
+        event.stopPropagation();
+    });
+
+    $('.gamb').on('click',function(){
+        $(this).toggleClass('active');
+        $(".bot-mnu ul").toggleClass('active');
+    });
+    $(document).on("click",function(event){
+        if( $(event.target).closest(".bot-mnu ul,.gamb").length )return;
+        $('.gamb').removeClass('active');
+        $(".bot-mnu ul").removeClass('active');
+        event.stopPropagation();
+    });
+
+    $(".header3__timer")
+        .countdown("2017/06/01", function(event) {
+            $(this).find(".days").text(event.strftime('%D'));
+            $(this).find(".hours").text(event.strftime('%H'));
+            $(this).find(".minutes").text(event.strftime('%M'));
+        });
+
 });
 
 //Форма отправки 2.0

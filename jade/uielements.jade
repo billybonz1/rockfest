@@ -1,11 +1,78 @@
-include _header
+include _headerelements
 .elemets-bg
     .inner
+        h2.h2-elements ГЛАВНАЯ СТРАНИЦА
+        p.p-elements анимация при наведении на видео:
+        .new-live__img
+        p.p-elements анимация при наведении на пагинации:
+        .new-lives__arrow.new-lives__arrow_left
+        a.btn.btn-orange(href="#")
+            span  Ко всем лайвам
+            i.fa.fa-long-arrow-right
+        .search-form
+            input(type="text",name="s",placeholder="Поиск по сайту")
+            button
+                i.fa.fa-search
+        .social
+            a.social__item.social__item_vk(href="#")
+                i.fa.fa-vk
+            a.social__item.social__item_tw(href="#")
+                i.fa.fa-twitter
+            a.social__item.social__item_fb(href="#")
+                i.fa.fa-facebook
+        ul.tabs.nav.nav-tabs(role="tablist")
+            li.nav-item
+                a.nav-link.active(href="#festivals",data-toggle="tab",role="tab") Фестивали
+            li.nav-item
+                a.nav-link(href="#lives",data-toggle="tab",role="tab") Лайвы
+            li.nav-item
+                a.nav-link(href="#clipes",data-toggle="tab",role="tab") Клипы
+        .tab-content
+            .tab-pane.active(id="festivals",role="tab-panel")
+                ul.tabs2.nav.nav-tabs(role="tablist")
+                    li.nav-item
+                        a.nav-link.active(href="#coming1",data-toggle="tab",role="tab")
+                            i.fa.fa-check
+                            span Предстоящие
+                    li.nav-item
+                        a.nav-link(href="#current1",data-toggle="tab",role="tab")
+                            i.fa.fa-check
+                            span Текущие
+                    li.nav-item
+                        a.nav-link(href="#past1",data-toggle="tab",role="tab")
+                            i.fa.fa-check
+                            span Прошедшие
+        a.btn.btn-grey(href="#")
+            span Перейти ко всем новостям
+            i.fa.fa-long-arrow-right
+        .subscribe
+            input(type="text",placeholder="Введите ваш E-Mail")
+            input.btn.btn-salat(type="submit",value="Подписаться на новости")
+        a.btn.btn-empty(href="#") Показать еще
+
+        .question
+            a.btn.question-btn(href="#") Есть вопросы? Пишите нам!
+            a.btn.question-btn-grey.pull-left(href="#") О проекте
+            a.btn.question-btn-grey.pull-right(href="#") Сотрудничество и реклама
+        .fade.popup(id="call",tabindex="-1",role="dialog")
+            .modal-dialog(role="document")
+                button.popup-close(type="button",data-dismiss="modal")
+                    i.fa.fa-times
+                h2 Есть вопросы? Пишите нам!
+                .modal-dialog_mod
+                    form
+                        label
+                            span Имя
+                            input(type="text")
+                        label
+                            span E-mail
+                            input(type="text")
+                        input.btn.btn-salat(type="submit",value="Отправить")
         .block-ty
             p.p-ty
                 span Заявка отправлена.
                 br
-                Мы свяжемся с Вами в ближайшее время.
+                |Мы свяжемся с Вами в ближайшее время.
         h2.h2-elements детальные страницы фестиваля
         .block-feedback
             a.btn.btn-feedback.btn-like(href="#")
@@ -30,9 +97,9 @@ include _header
             .block-views__item
                 i.fa.fa-eye
                 span 1 256 105
-             .block-views__item
-                 i.fa.fa-comment
-                 span 6 105
+            .block-views__item
+                i.fa.fa-comment
+                span 6 105
         .bread-crubms
             a.bread-crubms-single(href="#")
                 span Главная
@@ -46,5 +113,18 @@ include _header
                     i.fa.fa-caret-right
                 a.bread-crubms-single(href="#")
                     span Download Fest 2016
+
+        h2.h2-elements
+        .sidebar__new
+            .sidebar__new__date 14.05.15
+            a(href="#")
+                h3
+                    | RAM
+                    i.fa.fa-angle-right
+                    | Green Day примут участие в фестивале!
+            a(href="#")
+                p Die ROCK AM RING EXPERIENCE ist ein Feelgood-Paket für alle Festivalbesucher, die ein Erlebnis der besonderen Art suchen. Ihr Camp grenzt an die Hauptbühnen.
+
+        p.p1-el RAM     Green Day примут участие в фестивале!
 
 
