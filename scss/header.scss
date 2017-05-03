@@ -3,6 +3,14 @@
 @import "fonts";
 @import "app/libs/bootstrap/scss/bootstrap.scss";
 
+@font-face {
+  font-family: 'Proxima Nova Cond';
+  src: url('../fonts/proxima-nova-condensed-light-5909a016e3232.eot');
+  src: local('☺'), url('../fonts/proxima-nova-condensed-light-5909a016e3232.woff') format('woff'), url('../fonts/proxima-nova-condensed-light-5909a016e3232.ttf') format('truetype'), url('../fonts/proxima-nova-condensed-light-5909a016e3232.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
 body{
   font-family: "Open Sans";
   max-width: 1920px;
@@ -65,70 +73,78 @@ div.hamburger{
       text-shadow: none;
     }
   }
-  li{
+  li {
     float: left;
     width: 33.333333%;
     height: 50%;
-    border-left: 2px solid rgba(255,255,255,0.12);
-    border-top: 2px solid rgba(255,255,255,0.12);
-    &:hover{
-      a{
-        span{
-          &:after{
+    border-left: 2px solid rgba(255, 255, 255, 0.12);
+    border-top: 2px solid rgba(255, 255, 255, 0.12);
+    position: relative;
+    text-align: center;
+    background-color: #0a0a0a;
+    &:hover {
+      a {
+        span {
+          &:before {
             background-color: #a82f0d;
             transition: .5s all;
           }
         }
       }
     }
-    &:nth-child(3n+1){
+    &:nth-child(3n+1) {
       border-left: 0;
     }
-    &:nth-child(1),&:nth-child(2),&:nth-child(3){
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
       border-top: 0;
     }
-    a{
+    a {
       width: 100%;
-      height: 100%;
       display: block;
-      background-color: #0a0a0a;
-      position: relative;
       text-align: center;
-      padding-top: 15%;
-      span{
-        color: #ffffff;
-        font-size: 36px;
-        font-weight: 700;
-        text-transform: uppercase;
-        display: block;
-        position: absolute;
-        margin: auto;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        height: 9px;
-        &:after{
-          width: 104px;
-          height: 3px;
-          background-color: #ffffff;
+      height: 120px;
+      color: #ffffff;
+      font-size: 36px;
+      font-weight: 700;
+      text-transform: uppercase;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      span {
+        width: 104px;
+        height: 3px;
+        background-color: #ffffff;
+        display: inline-block;
+        line-height: 0;
+        &:after {
+          display: inline-block;
           content: "";
-          left: 50%;
-          top: -24px;
-          margin-left: -52px;
-          position: absolute;
+          width: 0;
+          height: 3px;
+          background-color: #a82f0d;
+          position: relative;
+          top: -10px;
+          transition: .3s all;
+        }
+      }
+      &:hover {
+        span:after {
+          width: 100%;
         }
       }
     }
   }
-  @media(max-width: 782px){
-    li{
-      a span{
+  @media(max-width: 782px) {
+    li {
+      a span {
         font-size: 24px;
       }
     }
 
-    li.close{
+    li.close {
       font-size: 24px;
       top: 5px;
       right: 5px;
@@ -205,11 +221,10 @@ div.hamburger{
     background: lighten(#000,10);
     &:after{
       border-radius: 30px;
-      padding-left: 5px;
     }
   }
   &:after{
-    transition: 1s;
+    transition: .4s all;
     width: 52px;
     height: 52px;
     border: 2px solid #ffffff;
@@ -226,6 +241,7 @@ div.hamburger{
     font-weight: 400;
     line-height: 46px;
     text-align: center;
+    padding-left: 5px;
   }
 }
 
@@ -472,6 +488,386 @@ div.hamburger{
     background-color: #0b5e9f;
   }
 }
+
+.header2{
+  height: 110px;
+  background-color: #000000;
+  position: relative;
+  @media(max-width: 991px){
+    height: auto;
+    padding: 20px 0;
+  }
+  .hash-tag{
+    margin-right: 60px;
+    @media(max-width: 991px){
+      margin-top: 0;
+    }
+    @media(max-width: 650px){
+      display: block;
+      width: 142px;
+      margin: 0 auto;
+      margin-bottom: 18px;
+    }
+  }
+  .social{
+    @media(max-width: 991px){
+      margin-top: 0;
+    }
+    @media(max-width: 650px){
+
+    }
+  }
+  .search-form{
+    margin-top: 32px;
+    margin-left: 69px;
+    width: 46px;
+    height: 38px;
+    vertical-align: top;
+    @media(max-width: 991px){
+      margin-top: 0;
+      margin-left: 60px;
+    }
+    @media(max-width: 650px){
+      margin-left: 27px;
+    }
+  }
+}
+
+.media-block{
+  display: inline-block;
+}
+
+.logo2{
+  margin: 39px 0;
+  @media(max-width: 991px){
+    margin: 0 auto;
+    margin-bottom: 18px;
+    width: 214px;
+  }
+  a{
+    background-image: url("../img/logo2.png");
+    background-repeat: no-repeat;
+    width: 214px;
+    height: 26px;
+    display: inline-block;
+  }
+}
+
+div.hamburger2{
+  position: absolute;
+  right: 129px;
+  top: 34px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 400;
+  cursor: pointer;
+  z-index: 10;
+  @media(max-width: 1200px){
+    right: 15px;
+  }
+  @media(max-width: 991px){
+    top: -24px;
+  }
+  @media(max-width: 650px){
+    top: -54px;
+    right: 15px;
+  }
+  @media(max-width: 450px){
+    top: -51px;
+    right: 14px;
+    font-size: 24px;
+  }
+}
+
+.media-container{
+  @media(max-width: 991px){
+    width: 454px;
+    margin: 0 auto;
+  }
+  @media(max-width: 650px){
+    width: 220px;
+  }
+}
+
+.menu2{
+  position: absolute;
+  width: 100%;
+  height: 110px;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 31px 0;
+  z-index: 100;
+  opacity: 1;
+  visibility: visible;
+  transition: .5s all;
+  @media(max-width: 991px){
+    height: 100%;
+    padding-top: 60px;
+  }
+  &.hide2{
+    left: -100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s all;
+  }
+  li.close2{
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 91px;
+    top: -4px;
+    border: 0;
+    opacity: 1;
+    transition: .2s all;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 400;
+    cursor: pointer;
+    @media(max-width: 1200px){
+      right: -23px;
+    }
+    @media(max-width: 1050px){
+      right: -12px;
+    }
+    @media(max-width: 991px){
+      right: 15px;
+      top: -50px;
+    }
+    &:hover{
+      color: #a82f0d;
+    }
+  }
+  li{
+    float: left;
+    margin-left: 18px;
+    margin-right: 39px;
+    @media(max-width: 1050px){
+      margin-right: 28px;
+    }
+    @media(max-width: 991px){
+      float: none;
+      margin: 0;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+    a{
+      color: #ffffff;
+      font-family: "Open Sans";
+      font-size: 24px;
+      font-weight: 400;
+      text-transform: uppercase;
+      transition: .2s all;
+      position: relative;
+      &:after{
+        position: absolute;
+        content: '';
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff;
+        transition: .3s all;
+      }
+      &:hover,&:focus{
+        color: #a82f0d;
+        text-decoration: none;
+        &:after{
+          background-color: #a82f0d;
+        }
+      }
+    }
+  }
+}
+
+.header3-content{
+  background-image: url("../img/header3-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 362px;
+}
+
+.header3__logo{
+  width: 391px;
+  height: 102px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+  @media(max-width: 420px){
+    width: 100%;
+  }
+  a{
+    width: 100%;
+    height: 102px;
+    background-image: url("../img/dwn-logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    span{
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.35);
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 62px;
+      @media(max-width: 420px){
+        font-size: 24px;
+      }
+    }
+  }
+  .text-left{
+    position: absolute;
+    bottom: -35px;
+    left: 40px;
+    @media(max-width: 420px){
+      left: 18px;
+    }
+   }
+  .text-right{
+    position: absolute;
+    bottom: -35px;
+    right: 15px;
+    @media(max-width: 420px){
+      right: 13px;
+    }
+  }
+}
+
+.header3__timer{
+  width: 269px;
+  height: 115px;
+  margin: 0 auto;
+  margin-top: 55px;
+  border-radius: 4px;
+  background-color: rgba(185, 185, 185, 0.5);
+  text-align: center;
+  padding: 5px 0;
+  p{
+    color: #1b1b1b;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    padding-bottom: 4px;
+  }
+  .header3__timer__item{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 6px;
+    p{
+      padding-top: 4px;
+    }
+  }
+  .header3__timer__item-block{
+    border-radius: 5px;
+    background-image: url("../img/flip.png");
+    background-position: center;
+    width: 68px;
+    height: 62px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Proxima Nova Cond";
+    font-size: 49px;
+    font-weight: 300;
+    line-height: 59px;
+    position: relative;
+    &:after{
+      position: absolute;
+      content: '';
+      width: 58px;
+      height: 2px;
+      background-color: #000000;
+      top: 25px;
+      left: 5px;
+    }
+  }
+}
+
+.bot-mnu{
+  width: 100%;
+  height: 62px;
+  background-color: #000000;
+  border-bottom: 5px solid #232121;
+  position: relative;
+  ul{
+    margin: 0;
+    transition: 1s all;
+    @media(max-width: 1170px){
+      left: -116%;
+      position: relative;
+      top: 0;
+      width: 320px;
+      height: 100%;
+      background-color: black;
+      z-index: 99;
+      &.active{
+        left: -15px;
+        transition: .5s all;
+      }
+    }
+    li{
+      float: left;
+      @media(max-width: 1170px){
+        float: none;
+        text-align: center;
+      }
+      a{
+        height: 57px;
+        display: block;
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 300;
+        text-transform: uppercase;
+        transition: .2s all;
+        padding: 9px 41px;
+        &:hover{
+          background-color: #a82f0d;
+        }
+      }
+    }
+  }
+}
+
+.bot-mnu-active{
+  background-color: #a82f0d;
+}
+
+.gamb{
+  display: none;
+  width: 25px;
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  z-index: 100;
+  @media(max-width: 1170px){
+    display: block;
+    span {
+      transition: .4s all;
+    }
+    &.active {
+      span:first-child {
+        transform: rotate(45deg) translateX(6px) translateY(6px);
+      }
+      span:nth-child(2) {
+        transform: rotate(-45deg) translateX(-1px) translateY(0px);
+      }
+      span:last-child {
+        opacity: 0;
+      }
+    }
+  }
+  span{
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin-bottom: 4px;
+    background: #FFFFFF;
+  }
+}
+
+
+
+
 
 
 
