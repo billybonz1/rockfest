@@ -1,133 +1,97 @@
-doctype html
-html.no-js(lang='ru')
-    head
-        meta(charset='utf-8')
-        title Заголовок
-        meta(name='description', content='')
-        meta(name='keywords', content='')
-        meta(property='og:title', content='')
-        meta(property='og:url', content='')
-        meta(property='og:image', content='')
-        meta(property='og:site_name', content='')
-        meta(property='og:description', content='')
-        meta(http-equiv='X-UA-Compatible', content='IE=edge')
-        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-        meta(property='og:image', content='path/to/image.jpg')
-        link(rel='shortcut icon', href='img/favicon/favicon.png', type='image/x-icon')
-        link(rel='apple-touch-icon', href='img/favicon/apple-touch-icon.png')
-        link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
-        link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
-        // RESET
-        style.
-            html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
-        // Load CSS, CSS Localstorage & WebFonts Main Function
-        script.
-            !function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);
-        link(rel='stylesheet', href='css/header.css')
-        // Load CSS Start
-        script.
-            loadCSS( "css/main.css?ver=1.0.0", false, "all" );
-            loadCSS(  "libs/components-font-awesome/css/font-awesome.min.css", false, "all");
-        // Load CSS End
-        // Load CSS Compiled without JS
-        noscript
-            link(rel='stylesheet', href='css/fonts.css')
-            link(rel='stylesheet', href='css/main.css')
-    body
-        ul.menu2.hide2.clearfix
-            .inner
-                li
-                    a(href="#") ФЕСТИВАЛИ
-                li
-                    a(href="#") ГРУППЫ
-                li
-                    a(href="#") лайвы
-                li
-                    a(href="#") НОВОСТИ
-                li
-                    a(href="#") клипы
-                li
-                    a(href="#") контакты
-                li.close2
-                    i.fa.fa-times
-        .header2
-            .inner
-                .container-fluid
-                    .row
-                        .col-lg-5.col-md-12
-                            .logo2
-                                a(href="#")
-                        .col-lg-7.col-md-12
-                            .media-container
-                                .hash-tag #ROCKISOK
-                                .media-block
-                                    .social
-                                        a.social__item.social__item_vk(href="#")
-                                            i.fa.fa-vk
-                                        a.social__item.social__item_tw(href="#")
-                                            i.fa.fa-twitter
-                                        a.social__item.social__item_fb(href="#")
-                                            i.fa.fa-facebook
-                                    .search-form
-                                        button
-                                            i.fa.fa-search
-                                .hamburger2.fa.fa-bars
-        .livestream
-            .inner
-                .container-fluid
-                    .row
-                        .col-md-7 Сейчас идет прямая трансляция фестиваля ROCK AM RING! НЕ ПРОПУСТИ!
-                        .col-md-5
-                            a.watch-live(href="#")
-                                i.fa.fa-chevron-circle-right
-                                span  Смотреть LIVE
-        .header3-content
-            .inner
-                .container-fluid
-                    .row
-                        .col-md-12
-                            .header3__logo
-                                a(href="#")
-                                    .text-left
-                                        span 2016
-                                    .text-right
-                                        span 10-12 ИЮНЯ
-                    .row
-                        .col-md-12
-                            .header3__timer
-                                p Осталось дней до фестиваля
-                                .header3__timer__item
-                                    .header3__timer__item-block.days
-                                        |10
-                                    p дни
-                                .header3__timer__item
-                                    .header3__timer__item-block.hours
-                                        |24
-                                    p часы
-                                .header3__timer__item
-                                    .header3__timer__item-block.minutes
-                                        |00
-                                    p минуты
-        .bot-mnu
-            .inner
-                .container-fluid
-                    .row
-                        .col-md-12
-                            .gamb
-                                span
-                                span
-                                span
-                            ul.clearfix
-                                li
-                                    a(href="#") Line up
-                                li
-                                    a(href="#") Информация
-                                li
-                                    a(href="#") билеты
-                                li
-                                    a.bot-mnu-active(href="#") ОТЗЫВЫ
-                                li
-                                    a(href="#") лайвы
-                                li
-                                    a(href="#") Похожие
+ul.menu2.hide2.clearfix
+    .inner
+        li
+            a(href="#") ФЕСТИВАЛИ
+        li
+            a(href="#") ГРУППЫ
+        li
+            a(href="#") лайвы
+        li
+            a(href="#") НОВОСТИ
+        li
+            a(href="#") клипы
+        li
+            a(href="#") контакты
+        li.close2
+            i.fa.fa-times
+.header2
+    .inner
+        .container-fluid
+            .row
+                .col-lg-5.col-md-12
+                    .logo2
+                        a(href="#")
+                .col-lg-7.col-md-12
+                    .media-container
+                        .hash-tag #ROCKISOK
+                        .media-block
+                            .social
+                                a.social__item.social__item_vk(href="#")
+                                    i.fa.fa-vk
+                                a.social__item.social__item_tw(href="#")
+                                    i.fa.fa-twitter
+                                a.social__item.social__item_fb(href="#")
+                                    i.fa.fa-facebook
+                            .search-form
+                                button
+                                    i.fa.fa-search
+                        .hamburger2.fa.fa-bars
+.livestream
+    .inner
+        .container-fluid
+            .row
+                .col-md-7 Сейчас идет прямая трансляция фестиваля ROCK AM RING! НЕ ПРОПУСТИ!
+                .col-md-5
+                    a.watch-live(href="#")
+                        i.fa.fa-chevron-circle-right
+                        span  Смотреть LIVE
+.header3-content
+    .inner
+        .container-fluid
+            .row
+                .col-md-12
+                    .header3__logo
+                        a(href="#")
+                            .text-left
+                                span 2016
+                            .text-right
+                                span 10-12 ИЮНЯ
+            .row
+                .col-md-12
+                    .header3__timer
+                        p Осталось дней до фестиваля
+                        .header3__timer__item
+                            .header3__timer__item-block.days
+                                |10
+                            p дни
+                        .header3__timer__item
+                            .header3__timer__item-block.hours
+                                |24
+                            p часы
+                        .header3__timer__item
+                            .header3__timer__item-block.minutes
+                                |00
+                            p минуты
+.bot-mnu
+    .inner
+        .container-fluid
+            .row
+                .col-md-12
+                    .gamb
+                        span
+                        span
+                        span
+                    ul.clearfix
+                        li
+                            a(href="#") Line up
+                        li
+                            a(href="#") Информация
+                        li
+                            a(href="#") билеты
+                        li
+                            a.bot-mnu-active(href="#") ОТЗЫВЫ
+                        li
+                            a(href="#") лайвы
+                        li
+                            a(href="#") Похожие
 
