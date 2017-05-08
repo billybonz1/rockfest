@@ -291,11 +291,11 @@
   background: url(../img/sidebar__new.png) no-repeat center bottom;
   background-size: contain; }
   .sidebar__new h3 {
-    line-height: 18px;
-    margin-top: 18px; }
+    line-height: 25px;
+    margin-top: 18px;
+    font-size: 16px; }
     .sidebar__new h3 a {
       color: #a82f0d;
-      font-size: 16px;
       font-weight: 700; }
     .sidebar__new h3 i {
       color: #a82f0d;
