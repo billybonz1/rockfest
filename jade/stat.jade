@@ -8,10 +8,19 @@ html.no-js(lang='ru')
                 .container-fluid
                     .row
                         .col-md-12
-                            .bread-crubms
-                                a.bread-crubms-single(href="#")
+                            .bread-crubms.clearfix
+                                a.bread-crubms-single.bread-crubms-main(href="#")
                                     span Главная
                                     i.fa.fa-caret-right
+                                .bread-crubms-multi
+                                    a.bread-crubms-single(href="#")
+                                        span Главная
+                                        i.fa.fa-caret-right
+                                    a.bread-crubms-single(href="#")
+                                        span Фестивали
+                                        i.fa.fa-caret-right
+                                    a.bread-crubms-single(href="#")
+                                        span Download Fest 2016
                         .col-md-12
                             p.p1-el Download Fest 2016 (10-12 июня)
                     .row

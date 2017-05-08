@@ -796,6 +796,15 @@ footer {
     text-transform: uppercase;
     vertical-align: top; }
 
+.bread-crubms .bread-crubms-multi {
+  display: none; }
+
+.bread-crubms:hover .bread-crubms-main {
+  display: none; }
+
+.bread-crubms:hover .bread-crubms-multi {
+  display: block; }
+
 .bread-crubms-multi {
   margin: 5px 0; }
   .bread-crubms-multi .bread-crubms-single {
