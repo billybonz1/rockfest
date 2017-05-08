@@ -85,6 +85,8 @@ $(function() {
         event.stopPropagation();
     });
 
+
+
     $(".header3__timer")
         .countdown("2017/06/01", function(event) {
             $(this).find(".days").text(event.strftime('%D'));
