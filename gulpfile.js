@@ -86,8 +86,6 @@ gulp.task('fileinclude', function() {
 });
 gulp.task('watch', function () {
 	gulp.watch('scss/*.scss', ['styles']);
-	gulp.watch('pages/**/*.html', ['fileinclude']);
-	gulp.watch('parts/**/*.html', ['fileinclude']);
     gulp.watch('jade/**/*.jade', ['jade']);
 	gulp.watch('app/libs/**/*.js', ['scripts']);
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
